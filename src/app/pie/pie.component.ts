@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service';
-import { ChartType, ChartOptions, Chart, registerables } from 'chart.js';
-import { SingleDataSet, Label, monkeyPatchChartJsLegend, monkeyPatchChartJsTooltip } from 'ng2-charts';
-Chart.register(...registerables);
+import { ChartType, ChartOptions, Chart } from 'chart.js';
+import { SingleDataSet, Label } from 'ng2-charts';
+// Chart.register(...registerables);
 
 
 @Component({
@@ -15,14 +15,12 @@ export class PieComponent implements OnInit {
   url = 'https://api.nationalize.io?name=michael';
   dataList;
   page2 = true;
-  pieDataSet: any = [];
+
   public pieChartLabels = [];
   public pieChartData = [];
   public pieChartType = 'pie';
 
-  constructor(private service: DataService) {
-
-  }
+  constructor(private service: DataService) {}
 
   pieChartOptions = {
     responsive: true

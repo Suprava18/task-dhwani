@@ -1,6 +1,5 @@
 import { DataService } from './../data.service';
 import { Component, OnInit } from '@angular/core';
-import { setUncaughtExceptionCaptureCallback } from 'node:process';
 
 @Component({
   selector: 'app-table',
